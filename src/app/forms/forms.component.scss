@@ -1,0 +1,50 @@
+
+*{
+    box-sizing: border-box;
+
+
+}
+.title{
+    font-family: cursive;
+    text-align: center; 
+    color: white;   
+    background-image: url('https://www.desktopbackground.org/p/2010/07/23/52871_top-rubiks-background-images-for-pinterest_1920x1080_h.jpg');
+    opacity: .9;
+    padding: 1.5%;
+    font-size: 50px;
+    border-radius: 20px;
+    font-weight: bolder;
+    
+}
+#out{
+    padding: 1%;
+    text-align: center ;
+    background-color: floralwhite;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10%;
+  
+}
+#info{
+    color: black;
+}
+
+label{
+    text-align: center;
+}
+
+
+// .for-lable{
+//     text-align: left;
+//     background: whitesmoke;
+// }
+
+.form-control {
+    margin: 10px;
+}
+label {
+    padding-left: 50px;
+    // padding-top: 20px;
+}

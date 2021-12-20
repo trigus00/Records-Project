@@ -1,0 +1,40 @@
+<div id= "out" class="container">
+    <div class="title">Rubik's Cube Submission ticket</div>
+    <form class="row" #competitorForm="ngForm" (ngSubmit)="onSubmit(competitorForm.valid)">
+
+        <div id="info" class="container">
+            <div class="col-md">
+                <label for="firstName" class="form-label">First name:</label>
+                <input type="text" name="firstName" class="form-control" id="firstName" value=""
+                    [(ngModel)]="competitor.Fname" required>
+
+                <label for="lastName" class="form-label">Last name:</label>
+                <input type="text" name="lastName" class="form-control" id="Lname" value=""
+                    [(ngModel)]="competitor.Lname" required>
+
+                <label for="age" class="form-label"> Age: </label>
+                <input type="number" name="age" class="form-control" id="age" value="" [(ngModel)]="competitor.age" required>
+                </div>
+               <div class="col-md">
+                <label for="email" class="form-label"> Email Address: </label>
+                <input type="email" name="email" class="form-control" id="email" value="" [(ngModel)]="competitor.email">
+
+                <label for="category" class="form-label"> Participated in:</label>
+                <select class="form-select" name="categorys" id="categorys" [(ngModel)]="competitor.category" required>
+                    <option *ngFor="let category of categorys" value="category">{{category}} </option>
+                </select>
+
+                <label for="confidence">Confidence Level</label>
+                <input type="range" name="skill" max="100" min="1" class="form-range" id="confidence" [(ngModel)]="competitor.confidence" name="confidence">
+
+                <div class="col">
+                    <button class="btn btn-primary" type="submit" [disabled]="competitorForm.invalid">Submit </button>
+                </div>
+            </div>
+        </div>
+    
+    </form>
+    <div> Thank you for your Submission:{{competitor.Fname}} </div>
+   
+</div>
+
